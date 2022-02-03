@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item"><a href="/products/">Productos</a></li>
+            <li class="main-header__item"><a class="active" href="/products/add-product">Agregar Productos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <% if (prods.length > 0) { %>
+        <div class="grid">
+            <% for (let product of prods) { %>
+                <article class="card product-item" >
+                    <header class="card__header">
+                        <h1 class="product-item"><%= product.title %></h1>
+                    </header>
+                    <div class="card__image">
+                        <img src=' <%= product.thumbnail%>' alt="Product">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="product__price"><%= product.price%></h2>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+    <% } else { %>
+        <h1>No Products Found!</h1>
+    <% } %>
+</main>
+</body>
+</html>

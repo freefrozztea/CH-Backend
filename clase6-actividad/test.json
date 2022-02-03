@@ -1,0 +1,12 @@
+[
+    {
+        "title": "cartuchera",
+        "price": 300,
+        "id": 1
+    },
+    {
+        "title": "mochila",
+        "price": 1500,
+        "id": 2
+    }
+]

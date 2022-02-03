@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "price": "4.000",
+        "title": "Teclado",
+        "thumbnail": "https://cdn.pixabay.com/photo/2016/05/23/05/48/keyboard-1409743_960_720.png"
+    },
+    {
+        "id": 2,
+        "price": "1.500",
+        "title": "Mouse",
+        "thumbnail": "https://cdn.pixabay.com/photo/2013/07/12/17/41/computer-mouse-152249_960_720.png"
+    },
+    {
+        "id": 3,
+        "price": "30.000",
+        "title": "Monitor",
+        "thumbnail": "https://cdn.pixabay.com/photo/2012/04/13/17/00/lcd-32872_960_720.png"
+    },
+    {
+        "id": 4,
+        "price": "35.000",
+        "title": "tele",
+        "thumbnail": "https://cdn.pixabay.com/photo/2013/07/12/14/10/plasma-tv-147902_960_720.png"
+    }
+]
