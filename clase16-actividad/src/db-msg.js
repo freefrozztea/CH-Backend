@@ -25,7 +25,7 @@ dbMessage.schema
     console.log("Table message created");
   })
   .catch((err) => {
-    throw err;
+    console.log("Esta tabla ya existe");
   });
 
 
