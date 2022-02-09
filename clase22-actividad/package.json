@@ -1,0 +1,40 @@
+{
+  "name": "clase22-actividad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "babel src -d dist",
+    "start": "npm run build && nodemon dist/server/index.js",
+    "test": "nodemon src/server/index.js --exec babel-node",
+    "test2": "nodemon src/scripts/table_mysql.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "freefrozztea",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "faker": "^5.5.3",
+    "knex": "^0.95.15",
+    "mongoose": "^6.2.1",
+    "mysql": "^2.18.1",
+    "normalizr": "^3.6.1",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
