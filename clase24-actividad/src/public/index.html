@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" id="login"></a>
+    <button class="btn btn-outline-danger my-2 my-sm-0" onclick="window.location.href='/logout.html'">Logout</button>
+  </nav>
+  
+  <h3 class="mt-10 text-black">Productos</h3>
+  <div>
+    <div class="table-responsive">
+      <table class="table table-secondary">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Picture</th>
+          </tr>
+        </thead>
+        <tbody id="productsTable">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3 class="text-black">Chat</h3>
+  <div>
+    <div>
+      <p id='normalizrPorcent'></p>
+      <p id='normalizrLength'></p>
+      <div class="table-responsive">
+        <table class="table" id="tablaChat">
+          <thead>
+            <tr>
+              <th>Picture</th>
+              <th>Email</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="chatsTable">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <form onsubmit="return sendChat()">
+      <div class="mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Nombre">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="age" name="age" placeholder="Edad">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="alias" name="alias" placeholder="Alias">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="avatar" name="avatar" placeholder="Avatar (URL)">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="msg" name="msg" placeholder="Mensaje">
+      </div>
+      <div class="mb-3">
+        <input type="submit" value="Enviar mensaje" class="btn btn-primary" />
+      </div>
+    </form>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
